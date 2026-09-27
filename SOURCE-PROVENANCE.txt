@@ -1,0 +1,9 @@
+﻿Moonlight base: b48494cb96bff23d8886c4775cc4f39a1075495d
+Snapshot includes working-tree modifications; it is not the base commit alone.
+Native submodules flattened into android/; .gitmodules files intentionally omitted.
+Tailscale Android: 803d93860da0652d501298883fcc61c70973290b
+Tailscale AAR reference SHA256: a2958859073a3a9dc938141fc71300281222d446db9ce311623e33efad738c52
+Native submodule revisions:
+ 874ac9548f1bd6f095ef2b435c42cdde460e7821 app/src/main/jni/moonlight-core/moonlight-common-c (874ac95)
+ aca87840b57f045a1f7f9299e4b1b9b8e2a5e2f1 app/src/main/jni/moonlight-core/moonlight-common-c/enet (heads/moonlight)
+ b1e3c22ca0cdc0bb83e3cd6ed1a2fc77869ed99a app/src/main/jni/moonlight-core/moonlight-common-c/nanors (b1e3c22)

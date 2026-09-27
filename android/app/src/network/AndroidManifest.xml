@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SYSTEM_EXEMPTED" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <application android:label="Desknpocket Network Lab" android:allowBackup="false"
+        android:fullBackupContent="@xml/mesh_backup_rules"
+        android:dataExtractionRules="@xml/mesh_extraction_rules"
+        tools:replace="android:allowBackup,android:fullBackupContent,android:dataExtractionRules">
+        <activity android:name="com.limelight.PcView" android:exported="true">
+            <intent-filter tools:node="removeAll" />
+        </activity>
+        <activity android:name="com.limelight.network.NetworkActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- Android permits systemExempted for user-approved VPN apps. The service checks
+             VpnService.prepare before startForeground; exact-alarm permission is not required.
+             https://developer.android.com/develop/background-work/services/fgs/service-types#system-exempted -->
+        <service android:name="com.limelight.network.MeshVpnService"
+            android:permission="android.permission.BIND_VPN_SERVICE"
+            android:exported="false" android:foregroundServiceType="systemExempted"
+            tools:ignore="ForegroundServicePermission">
+            <intent-filter><action android:name="android.net.VpnService" /></intent-filter>
+            <meta-data android:name="android.net.VpnService.SUPPORTS_ALWAYS_ON" android:value="false" />
+        </service>
+    </application>
+</manifest>

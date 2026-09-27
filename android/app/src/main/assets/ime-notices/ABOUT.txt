@@ -1,0 +1,15 @@
+Moonlight IME — unofficial personal Android build, modified 2026-09-23.
+Based on Moonlight Android 12.2, upstream commit b48494cb96bff23d8886c4775cc4f39a1075495d.
+Original project: https://github.com/moonlight-stream/moonlight-android
+Original authors include Cameron Gutman, Diego Waxemberg, Aaron Neyer, Andrew Hennessy,
+and the Moonlight contributors. Original copyright notices remain applicable.
+
+Custom changes: Android IME composing/commit/deletion bridge, floating keyboard toggle,
+one-shot desktop-key toolbar, separate app identity, and regression tests.
+No Sunshine or streaming-protocol changes. This is not an official Moonlight release.
+
+Moonlight is GPL-3.0 licensed. Custom changes are GPL-3.0-or-later.
+See Moonlight-GPL-3.0.txt and the corresponding source archive distributed with this APK.
+OpenSSL and Opus notices are also included in this directory. Other upstream component
+licenses and notices are preserved in the source project and dependency metadata.
+This software is provided without warranty.
